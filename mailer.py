@@ -1,4 +1,4 @@
-# Anonymous Mail from Anonymous.org - Send mail over Anonymous.org
+# Anonymous Mail from Anonymouse.org - Send mail over Anonymouse.org
 #
 # Creation:    04.10.2019
 # Last Update: 04.10.2019
@@ -35,7 +35,8 @@ import requests, sys
 #
 # Global Objects
 banner_txt = """
-Anonymouse Mail by anonyamouse.org
+Anonymous Mail
+powered by anonymouse
 """
 
 useragent_txt = """
