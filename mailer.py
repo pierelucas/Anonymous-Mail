@@ -42,7 +42,6 @@ banner_txt = """
  |     | |  \_| |_____| |  \_|    |    |  |  | |_____| |_____| ______|     |  |  | |     | __|__ |_____
 """
 
-
 useragent_txt = """
 [1] Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0\n
 [2] Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36\n
@@ -115,7 +114,6 @@ def run(to, subject, message, ua):
 #
 # TO BE CONTINUED ...
 #
-
 out()
 
 ua = user_agent()
