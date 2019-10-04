@@ -31,14 +31,17 @@
 # Module
 #
 import requests, sys, subprocess
+from colorama import Fore, Style
 
 #
 # Global Objects
 #
 banner_txt = """
-Anonymous Mail
-powered by anonymouse
+ _______ __   _  _____  __   _ __   __ _______  _____  _     _ _______     _______ _______ _____       
+ |_____| | \  | |     | | \  |   \_/   |  |  | |     | |     | |______ ___ |  |  | |_____|   |   |     
+ |     | |  \_| |_____| |  \_|    |    |  |  | |_____| |_____| ______|     |  |  | |     | __|__ |_____
 """
+
 
 useragent_txt = """
 [1] Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0\n
@@ -53,12 +56,12 @@ useragent_txt = """
 def out():
 
     subprocess.call("clear", shell=True)
-    print(banner_txt)
+    print(Fore.CYAN + banner_txt + Style.RESET_ALL)
 
 def user_agent():
 
     print(useragent_txt)
-    choice = str(input("Which option number : "))
+    choice = str(input("Choose User-Agent : "))
     if choice == '1':
         user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0"
     elif choice == '2':
