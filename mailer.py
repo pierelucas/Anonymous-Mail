@@ -32,6 +32,8 @@
 #
 import requests
 
+#
+# Global Objects
 banner_txt = """
 Anonymouse Mail by anonyamouse.org
 """
@@ -43,6 +45,9 @@ useragent_txt = """
 [4] Own
 """
 
+#
+# Functions
+#
 def out():
 
     print(banner_txt)
