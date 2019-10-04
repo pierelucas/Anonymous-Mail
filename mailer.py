@@ -30,7 +30,10 @@
 #
 # Module
 #
-import requests, sys
+import requests, sys, subprocess
+
+from colorama import Fore
+from colorama import Style
 
 #
 # Global Objects
@@ -40,9 +43,9 @@ powered by anonymouse
 """
 
 useragent_txt = """
-[1] Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0
-[2] Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36
-[3] BrightSign/8.0.69 (XT1143)Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) QtWebEngine/5.11.2 Chrome/65.0.3325.230 Safari/537.36
+[1] Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0\n
+[2] Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36\n
+[3] BrightSign/8.0.69 (XT1143)Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) QtWebEngine/5.11.2 Chrome/65.0.3325.230 Safari/537.36\n
 [4] Own
 """
 
@@ -51,7 +54,8 @@ useragent_txt = """
 #
 def out():
 
-    print(banner_txt)
+    subprocess.call("clear", shell=True)
+    print(Fore.CYAN + banner_txt)
 
 def user_agent():
 
