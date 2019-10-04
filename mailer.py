@@ -34,6 +34,7 @@ import requests, sys, subprocess
 
 #
 # Global Objects
+#
 banner_txt = """
 Anonymous Mail
 powered by anonymouse
@@ -90,9 +91,9 @@ def run(to, subject, message, ua):
         "Host": "anonymouse.org",
         "User-Agent": user_agent,
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-	    "Accept-Language": "en-US,en;q=0.5",
-	    "Accept-Encoding": "gzip, deflate",
-	    "Referer": "http://anonymouse.org/anonemail.html",
+	        "Accept-Language": "en-US,en;q=0.5",
+	        "Accept-Encoding": "gzip, deflate",
+	        "Referer": "http://anonymouse.org/anonemail.html",
         "Connection": "close",
         "Upgrade-Insecure-Requests": "1",
         "Content-Type":"application/x-www-form-urlencoded"
