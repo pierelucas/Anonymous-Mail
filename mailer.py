@@ -82,3 +82,12 @@ def run(to, subject, message, ua):
 
 
 
+
+# TO BE CONTINUED ...
+
+out()
+
+ua = user_agent()
+to, subject, message = data_()
+
+run(to, subject, message, ua)
