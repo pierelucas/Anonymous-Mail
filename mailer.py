@@ -80,7 +80,25 @@ def data_():
 
 def run(to, subject, message, ua):
 
+    user_agent = ua
+    url = "http://anonymouse.org/cgi-bin/anon-email.cgi"
 
+    session = requests.Session()
+    cgi_reqeust = session.post(url, headers={
+        "Host": "anonymouse.org",
+        "User-Agent": user_agent,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+	    "Accept-Language": "en-US,en;q=0.5",
+	    "Accept-Encoding": "gzip, deflate",
+	    "Referer": "http://anonymouse.org/anonemail.html",
+        "Connection": "close",
+        "Upgrade-Insecure-Requests": "1",
+        "Content-Type":"application/x-www-form-urlencoded"
+    }, data={
+        "to": to
+        "subject": subject
+        "message": message
+    })
 
 
 # TO BE CONTINUED ...
