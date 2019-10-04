@@ -32,9 +32,6 @@
 #
 import requests, sys, subprocess
 
-from colorama import Fore
-from colorama import Style
-
 #
 # Global Objects
 banner_txt = """
@@ -55,7 +52,7 @@ useragent_txt = """
 def out():
 
     subprocess.call("clear", shell=True)
-    print(Fore.CYAN + banner_txt)
+    print(banner_txt)
 
 def user_agent():
 
