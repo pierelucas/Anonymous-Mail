@@ -111,7 +111,9 @@ def run(to, subject, message, ua):
         print("Email not sended")
         sys.exit(0)
 
+#
 # TO BE CONTINUED ...
+#
 
 out()
 
