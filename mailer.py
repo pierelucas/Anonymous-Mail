@@ -46,7 +46,21 @@ useragent_txt = """
 def out():
 
     print(banner_txt)
+
+def user_agent():
+
     print(useragent_txt)
+    choice = str(input("Which option number : "))
+    if choice == '1':
+        user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0"
+    elif choice == '2':
+        user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36"
+    elif choice == '3':
+        user_agent = "BrightSign/8.0.69 (XT1143)Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) QtWebEngine/5.11.2 Chrome/65.0.3325.230 Safari/537.36"
+    else:
+        user_agent = str(input("Your User Agent : "))
+
+    return user_agent
 
 def data_():
 
@@ -57,8 +71,9 @@ def data_():
     print("Message : ")
     message = str(input())
 
+    return to, subject, message
 
-def run(to, subject, message):
+def run(to, subject, message, ua):
 
 
 
