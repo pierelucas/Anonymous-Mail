@@ -30,7 +30,7 @@
 #
 # Module
 #
-import requests
+import requests, sys
 
 #
 # Global Objects
@@ -84,7 +84,7 @@ def run(to, subject, message, ua):
     url = "http://anonymouse.org/cgi-bin/anon-email.cgi"
 
     session = requests.Session()
-    cgi_reqeust = session.post(url, headers={
+    request = session.post(url, headers={
         "Host": "anonymouse.org",
         "User-Agent": user_agent,
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -95,11 +95,16 @@ def run(to, subject, message, ua):
         "Upgrade-Insecure-Requests": "1",
         "Content-Type":"application/x-www-form-urlencoded"
     }, data={
-        "to": to
-        "subject": subject
+        "to": to,
+        "subject": subject,
         "message": message
     })
 
+    if "The e-mail has been sent" in request.text:
+        print("Sucessfully sended")
+    else:
+        print("Email not sended")
+        sys.exit(0)
 
 # TO BE CONTINUED ...
 
